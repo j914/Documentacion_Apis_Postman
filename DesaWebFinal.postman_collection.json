@@ -1,0 +1,2992 @@
+{
+	"info": {
+		"_postman_id": "632b150f-03ef-4aa8-a5eb-3626a132828c",
+		"name": "DesaWebFinal",
+		"description": "# Introduction\nEsta documentacion contiene la informacion necesaria de cada Api.\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nNo existe ningun error en las apis.\n# Rate limit\nIs there a limit to the number of requests a user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Estudiante_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carnet\": \"0905-16-11439\",\r\n    \"estudiante_nombre\": \"Gabriel\",\r\n    \"estudiante_apellido\": \"Castillo Garcia\",\r\n    \"cursos\": [\r\n        \"01\",\r\n        \"02\"\r\n    ],\r\n    \"usuario\":[\r\n        \"09051611439\"\r\n\r\n    ],\r\n    \"rol\": [\r\n        \"002\"\r\n    ],\r\n    \"disponibilidad\":[\r\n        \"SI\"\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Estudiante/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Estudiante",
+						"registro"
+					]
+				},
+				"description": "En esta solicitud de metodo get, se ingresan todos los datos en formato json.\n \nSe pide agregar \ncarnet:\nestudiante_nombre:\nestudiante_apellido:\ncursos: se hace referencia al modelo de cursos, en donde se ingresa el id_curso\nusuario: se hace referencia al modelo de usuarios, en donde se ingresa el id_usuario\nrol: se hace referencia al modelo de roles, se ingresa el iD_Rol\ndisponibilidad: se hace referencia al modelo Disponibilidad, se ingresa Disponibilidadd, \"SI\" o \"NO\""
+			},
+			"response": [
+				{
+					"name": "Estudiante_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carnet\": \"0905-16-11439\",\r\n    \"estudiante_nombre\": \"Gabriel\",\r\n    \"estudiante_apellido\": \"Castillo Garcia\",\r\n    \"cursos\": [\r\n        \"01\",\r\n        \"02\"\r\n    ],\r\n    \"usuario\":[\r\n        \"09051611439\"\r\n\r\n    ],\r\n    \"rol\": [\r\n        \"002\"\r\n    ],\r\n    \"disponibilidad\":[\r\n        \"SI\"\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Estudiante/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Estudiante",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"152-7xn5+XIqjazspB6egtTfZlwJM5Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:48:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Estudiantes\": {\n        \"carnet\": \"0905-16-11439\",\n        \"estudiante_nombre\": \"Gabriel\",\n        \"estudiante_apellido\": \"Castillo Garcia\",\n        \"cursos\": [\n            \"617b7771ce18403429416481\",\n            \"617b7808554db69c12cfa9c8\"\n        ],\n        \"usuario\": [\n            \"617dabf043f147bbfda8da35\"\n        ],\n        \"rol\": [\n            \"617d5bdc1f36c36ddf893ff0\"\n        ],\n        \"disponibilidad\": [\n            \"617d685c76bd3110f72bd059\"\n        ],\n        \"_id\": \"617dafb143f147bbfda8da55\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Estudiante_get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Estudiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Estudiante"
+					]
+				},
+				"description": "En el metodo get se muestran todos los datos de la tabla de Estudiantes."
+			},
+			"response": [
+				{
+					"name": "Estudiante_get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Estudiante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Estudiante"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b5-AdCWHFWbtP8wAn5ZE06hGA1Bogg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:49:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Estudiantes\": [\n        {\n            \"_id\": \"617d6b6e50f212d20b379caa\",\n            \"carnet\": \"0905-21\",\n            \"estudiante_nombre\": \"Jorge\",\n            \"estudiante_apellido\": \"Castillo Garcia\",\n            \"cursos\": [\n                {\n                    \"_id\": \"617b7771ce18403429416481\",\n                    \"id_Curso\": \"01\",\n                    \"Curso_nombre\": \"Desarrollo Web\"\n                }\n            ],\n            \"usuario\": [\n                {\n                    \"_id\": \"617d6474a75a156c45fd6620\",\n                    \"id_usuario\": \"1991\",\n                    \"usuario_nombre\": \"gbrielcastillog10@miumg.edu.gt\",\n                    \"usuario_password\": \"test12345\",\n                    \"__v\": 0\n                }\n            ],\n            \"rol\": [\n                {\n                    \"_id\": \"617d5bdc1f36c36ddf893ff0\",\n                    \"id_Rol\": \"002\",\n                    \"Rol\": \"ESTUDIANTE\",\n                    \"__v\": 0\n                }\n            ],\n            \"disponibilidad\": [\n                {\n                    \"_id\": \"617d685c76bd3110f72bd059\",\n                    \"Disponibilidad\": \"SI\",\n                    \"__v\": 0\n                }\n            ],\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617dafb143f147bbfda8da55\",\n            \"carnet\": \"0905-16-11439\",\n            \"estudiante_nombre\": \"Gabriel\",\n            \"estudiante_apellido\": \"Castillo Garcia\",\n            \"cursos\": [\n                {\n                    \"_id\": \"617b7771ce18403429416481\",\n                    \"id_Curso\": \"01\",\n                    \"Curso_nombre\": \"Desarrollo Web\"\n                },\n                {\n                    \"_id\": \"617b7808554db69c12cfa9c8\",\n                    \"id_Curso\": \"02\",\n                    \"Curso_nombre\": \"Redes\"\n                }\n            ],\n            \"usuario\": [\n                {\n                    \"_id\": \"617dabf043f147bbfda8da35\",\n                    \"id_usuario\": \"09051611439\",\n                    \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\n                    \"usuario_password\": \"Contrasenia\",\n                    \"__v\": 0\n                }\n            ],\n            \"rol\": [\n                {\n                    \"_id\": \"617d5bdc1f36c36ddf893ff0\",\n                    \"id_Rol\": \"002\",\n                    \"Rol\": \"ESTUDIANTE\",\n                    \"__v\": 0\n                }\n            ],\n            \"disponibilidad\": [\n                {\n                    \"_id\": \"617d685c76bd3110f72bd059\",\n                    \"Disponibilidad\": \"SI\",\n                    \"__v\": 0\n                }\n            ],\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Estudiante_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"carnet\": \"0905-16-11439\",\r\n        \"estudiante_nombre\": \"Gabrielito\",\r\n        \"estudiante_apellido\": \"Castillo Garcia\",\r\n        \"cursos\": [\r\n            \"617b7771ce18403429416481\",\r\n            \"617b7808554db69c12cfa9c8\"\r\n        ],\r\n        \"usuario\": [\r\n            \"617dabf043f147bbfda8da35\"\r\n        ],\r\n        \"rol\": [\r\n            \"617d5bdc1f36c36ddf893ff0\"\r\n        ],\r\n        \"disponibilidad\": [\r\n            \"617d685c76bd3110f72bd059\"\r\n        ],\r\n        \"_id\": \"617dafb143f147bbfda8da55\"\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Estudiante/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Estudiante",
+						"modificar"
+					]
+				},
+				"description": "Metodo de modificar,\nse toma todo el objeto como tal a modificar, incluyendo la id que genera mongo"
+			},
+			"response": [
+				{
+					"name": "Estudiante_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"carnet\": \"0905-16-11439\",\r\n        \"estudiante_nombre\": \"Gabrielito\",\r\n        \"estudiante_apellido\": \"Castillo Garcia\",\r\n        \"cursos\": [\r\n            \"617b7771ce18403429416481\",\r\n            \"617b7808554db69c12cfa9c8\"\r\n        ],\r\n        \"usuario\": [\r\n            \"617dabf043f147bbfda8da35\"\r\n        ],\r\n        \"rol\": [\r\n            \"617d5bdc1f36c36ddf893ff0\"\r\n        ],\r\n        \"disponibilidad\": [\r\n            \"617d685c76bd3110f72bd059\"\r\n        ],\r\n        \"_id\": \"617dafb143f147bbfda8da55\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Estudiante/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Estudiante",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"152-ht8lvGr2Mf/wRwKkI3wumPEfzGY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:50:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Estudiantes\": {\n        \"_id\": \"617dafb143f147bbfda8da55\",\n        \"carnet\": \"0905-16-11439\",\n        \"estudiante_nombre\": \"Gabriel\",\n        \"estudiante_apellido\": \"Castillo Garcia\",\n        \"cursos\": [\n            \"617b7771ce18403429416481\",\n            \"617b7808554db69c12cfa9c8\"\n        ],\n        \"usuario\": [\n            \"617dabf043f147bbfda8da35\"\n        ],\n        \"rol\": [\n            \"617d5bdc1f36c36ddf893ff0\"\n        ],\n        \"disponibilidad\": [\n            \"617d685c76bd3110f72bd059\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Estudiante_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Estudiante/eliminar/617dafb143f147bbfda8da55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Estudiante",
+						"eliminar",
+						"617dafb143f147bbfda8da55"
+					]
+				},
+				"description": "En el metodo Delete.\nSe necesita unicamente la _id generada por mongo, despues de la api\neliminar/sk343493u49u394u3"
+			},
+			"response": [
+				{
+					"name": "Estudiante_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Estudiante/eliminar/617dafb143f147bbfda8da55",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Estudiante",
+								"eliminar",
+								"617dafb143f147bbfda8da55"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "341"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"155-t9Qh4osteE+inpW8w0tnyF1YttY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:51:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Estudiantes\": {\n        \"_id\": \"617dafb143f147bbfda8da55\",\n        \"carnet\": \"0905-16-11439\",\n        \"estudiante_nombre\": \"Gabrielito\",\n        \"estudiante_apellido\": \"Castillo Garcia\",\n        \"cursos\": [\n            \"617b7771ce18403429416481\",\n            \"617b7808554db69c12cfa9c8\"\n        ],\n        \"usuario\": [\n            \"617dabf043f147bbfda8da35\"\n        ],\n        \"rol\": [\n            \"617d5bdc1f36c36ddf893ff0\"\n        ],\n        \"disponibilidad\": [\n            \"617d685c76bd3110f72bd059\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Catedratico_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"catedratico_nombres\": \"KeXnnet\",\r\n    \"catedratico_apellidos\": \"Castillo\",\r\n     \"cursos\": [\r\n        \"02\"\r\n    ],\r\n    \"usuario\": [ \r\n        \"28\"\r\n    ],\r\n    \"rolC\": [\r\n        \"004\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Catedratico/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Catedratico",
+						"registro"
+					]
+				},
+				"description": "Metodo Post de la api Catedratico \nse ingresan los datos pidiento los siguientes requerimientos.\n\ncatedratico_nombres:\ncatedratico_apeliidos:\ncursos: hace referencia al modelo Curso, se ingresa el id_Curso.\nusuario: hace referencia al modelo de Usuarios, se ingresa el id_usuario.\nrolC: hace referencia al modelo de Roles, se ingresa el iD_Rol."
+			},
+			"response": [
+				{
+					"name": "Catedratico_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"catedratico_nombres\": \"KeXnnet\",\r\n    \"catedratico_apellidos\": \"Castillo\",\r\n     \"cursos\": [\r\n        \"02\"\r\n    ],\r\n    \"usuario\": [ \r\n        \"28\"\r\n    ],\r\n    \"rolC\": [\r\n        \"004\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Catedratico/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Catedratico",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-03mSeka4+8QgnJGwh0Tde8csgsQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:19:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Catedraticos\": {\n        \"catedratico_nombres\": \"KeXnnet\",\n        \"catedratico_apellidos\": \"Castillo\",\n        \"cursos\": [\n            \"617b7808554db69c12cfa9c8\"\n        ],\n        \"usuario\": [\n            \"617db0bd43f147bbfda8da62\"\n        ],\n        \"rolC\": [\n            \"617db47a43f147bbfda8da8d\"\n        ],\n        \"_id\": \"617db6e9c485d5db76ed2fac\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Catedratico_Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Catedratico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Catedratico"
+					]
+				},
+				"description": "Se muestran todo el json, de los datos almacenados de los catedraticos."
+			},
+			"response": [
+				{
+					"name": "Catedratico_Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Catedratico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Catedratico"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "443"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bb-dhxLdh8+FgQTXnJj8FMdCyuVIJo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:20:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Catedraticos\": [\n        {\n            \"_id\": \"617db6e9c485d5db76ed2fac\",\n            \"catedratico_nombres\": \"KeXnnet\",\n            \"catedratico_apellidos\": \"Castillo\",\n            \"cursos\": [\n                {\n                    \"_id\": \"617b7808554db69c12cfa9c8\",\n                    \"id_Curso\": \"02\",\n                    \"Curso_nombre\": \"Redes\"\n                }\n            ],\n            \"usuario\": [\n                {\n                    \"_id\": \"617db0bd43f147bbfda8da62\",\n                    \"id_usuario\": \"28\",\n                    \"usuario_nombre\": \"kennet@miumg.edu.gt\",\n                    \"usuario_password\": \"test12345\",\n                    \"__v\": 0\n                }\n            ],\n            \"rolC\": [\n                {\n                    \"_id\": \"617db47a43f147bbfda8da8d\",\n                    \"id_Rol\": \"004\",\n                    \"Rol\": \"CATEDRATICO\",\n                    \"__v\": 0\n                }\n            ],\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Catedratico_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"_id\": \"617db6e9c485d5db76ed2fac\",\r\n            \"catedratico_nombres\": \"Kennet\",\r\n            \"catedratico_apellidos\": \"Castillo\",\r\n            \"cursos\": [\r\n                {\r\n                    \"_id\": \"617b7808554db69c12cfa9c8\",\r\n                    \"id_Curso\": \"02\",\r\n                    \"Curso_nombre\": \"Redes\"\r\n                }\r\n            ],\r\n            \"usuario\": [\r\n                {\r\n                    \"_id\": \"617db0bd43f147bbfda8da62\",\r\n                    \"id_usuario\": \"28\",\r\n                    \"usuario_nombre\": \"kennet@miumg.edu.gt\",\r\n                    \"usuario_password\": \"test12345\",\r\n                    \"__v\": 0\r\n                }\r\n            ],\r\n            \"rolC\": [\r\n                {\r\n                    \"_id\": \"617db47a43f147bbfda8da8d\",\r\n                    \"id_Rol\": \"004\",\r\n                    \"Rol\": \"CATEDRATICO\",\r\n                    \"__v\": 0\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Catedratico/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Catedratico",
+						"modificar"
+					]
+				},
+				"description": "Se ingresa el objeto json a modificar, contemplando que debe contener el _id generada por mongo db."
+			},
+			"response": [
+				{
+					"name": "Catedratico_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"_id\": \"617db6e9c485d5db76ed2fac\",\r\n            \"catedratico_nombres\": \"Kennet\",\r\n            \"catedratico_apellidos\": \"Castillo\",\r\n            \"cursos\": [\r\n                {\r\n                    \"_id\": \"617b7808554db69c12cfa9c8\",\r\n                    \"id_Curso\": \"02\",\r\n                    \"Curso_nombre\": \"Redes\"\r\n                }\r\n            ],\r\n            \"usuario\": [\r\n                {\r\n                    \"_id\": \"617db0bd43f147bbfda8da62\",\r\n                    \"id_usuario\": \"28\",\r\n                    \"usuario_nombre\": \"kennet@miumg.edu.gt\",\r\n                    \"usuario_password\": \"test12345\",\r\n                    \"__v\": 0\r\n                }\r\n            ],\r\n            \"rolC\": [\r\n                {\r\n                    \"_id\": \"617db47a43f147bbfda8da8d\",\r\n                    \"id_Rol\": \"004\",\r\n                    \"Rol\": \"CATEDRATICO\",\r\n                    \"__v\": 0\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Catedratico/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Catedratico",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ee-Rlr85T/2WtzbQJxhmnuEUsXEIUQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:23:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Catedraticos\": {\n        \"_id\": \"617db6e9c485d5db76ed2fac\",\n        \"catedratico_nombres\": \"Kennet\",\n        \"catedratico_apellidos\": \"Castillo\",\n        \"cursos\": [\n            \"617b7808554db69c12cfa9c8\"\n        ],\n        \"usuario\": [\n            \"617db0bd43f147bbfda8da62\"\n        ],\n        \"rolC\": [\n            \"617db47a43f147bbfda8da8d\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Catedratico_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Catedratico/eliminar/617db6e9c485d5db76ed2fa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Catedratico",
+						"eliminar",
+						"617db6e9c485d5db76ed2fa"
+					]
+				},
+				"description": "Para eliminar un catedratico, solo se ingresa el _id generada por mongo, despues de la api eliminar/43984y3984"
+			},
+			"response": [
+				{
+					"name": "Catedratico_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Catedratico/eliminar/617db6e9c485d5db76ed2fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Catedratico",
+								"eliminar",
+								"617db6e9c485d5db76ed2fa"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ee-Rlr85T/2WtzbQJxhmnuEUsXEIUQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:23:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Catedraticos\": {\n        \"_id\": \"617db6e9c485d5db76ed2fac\",\n        \"catedratico_nombres\": \"Kennet\",\n        \"catedratico_apellidos\": \"Castillo\",\n        \"cursos\": [\n            \"617b7808554db69c12cfa9c8\"\n        ],\n        \"usuario\": [\n            \"617db0bd43f147bbfda8da62\"\n        ],\n        \"rolC\": [\n            \"617db47a43f147bbfda8da8d\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Usuario_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id_usuario\": \"28\",\r\n        \"usuario_nombre\": \"kennet@miumg.edu.gt\",\r\n        \"usuario_password\": \"test12345\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/usuario/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"usuario",
+						"registro"
+					]
+				},
+				"description": "En la api de de usuarios se agregan los datos siguientes sin referencias.\nid_usuario:\nusuario_nombre:\nusuario_password:"
+			},
+			"response": [
+				{
+					"name": "Usuario_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id_usuario\": \"09051611439\",\r\n        \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\r\n        \"usuario_password\": \"test12345\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/usuario/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"usuario",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a2-cqAZCCL2qltkto3NVp4kaFJGOBw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:32:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Usuarios\": {\n        \"id_usuario\": \"09051611439\",\n        \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\n        \"usuario_password\": \"test12345\",\n        \"_id\": \"617dabf043f147bbfda8da35\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Usuario_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"_id\": \"617dabf043f147bbfda8da35\",\r\n            \"id_usuario\": \"09051611439\",\r\n            \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\r\n            \"usuario_password\": \"Contrasenia\"\r\n            \r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/usuario/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"usuario",
+						"modificar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Usuario_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"_id\": \"617dabf043f147bbfda8da35\",\r\n            \"id_usuario\": \"09051611439\",\r\n            \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\r\n            \"usuario_password\": \"Contrasenia\"\r\n            \r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/usuario/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"usuario",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a2-gKYSYa5HaeDL8DSsF7mB7MWlPqQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:34:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Usuarios\": {\n        \"_id\": \"617dabf043f147bbfda8da35\",\n        \"id_usuario\": \"09051611439\",\n        \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\n        \"usuario_password\": \"test12345\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Usuario_Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"usuario"
+					]
+				},
+				"description": "En el metodo Get.\nse muestran todos los datos almacenados en la tabla modelo Usuarios."
+			},
+			"response": [
+				{
+					"name": "Usuario_Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "447"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bf-VRpLpduoTpM3JzMzbMtvvW0qx70\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:33:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Usuarios\": [\n        {\n            \"_id\": \"617d5bbb1f36c36ddf893fee\",\n            \"id_usuario\": \"1990\",\n            \"usuario_nombre\": \"Jcastillog10@miumg.edu.gt\",\n            \"usuario_password\": \"test12345\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617d6474a75a156c45fd6620\",\n            \"id_usuario\": \"1991\",\n            \"usuario_nombre\": \"gbrielcastillog10@miumg.edu.gt\",\n            \"usuario_password\": \"test12345\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617dabf043f147bbfda8da35\",\n            \"id_usuario\": \"09051611439\",\n            \"usuario_nombre\": \"JORGEcastillog10@miumg.edu.gt\",\n            \"usuario_password\": \"test12345\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Usuario_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/usuario/eliminar/617d5bbb1f36c36ddf893fee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"usuario",
+						"eliminar",
+						"617d5bbb1f36c36ddf893fee"
+					]
+				},
+				"description": "En el metodo delete de usuarios.\nse agrega la _id generada por mongo db, para eliminar el usuario deseado.\neliminar/rtregreiurbd334."
+			},
+			"response": [
+				{
+					"name": "Usuario_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/usuario/eliminar/617d5bbb1f36c36ddf893fee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"usuario",
+								"eliminar",
+								"617d5bbb1f36c36ddf893fee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"97-RTEmeU0CEdUiv3/7fKNBDbX7uWw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:35:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Usuarios\": {\n        \"_id\": \"617d5bbb1f36c36ddf893fee\",\n        \"id_usuario\": \"1990\",\n        \"usuario_nombre\": \"Jcastillog10@miumg.edu.gt\",\n        \"usuario_password\": \"test12345\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Nota_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nota_codigo\": \"102021\",\r\n    \"nota\": \"10\",\r\n     \"curso\": [\r\n     \"01\"\r\n ],\r\n    \"estudiante\": [\r\n     \"0905-21\"\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Nota/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Nota",
+						"registro"
+					]
+				},
+				"description": "En el metodo post de la api de notas, los datos se ingresan de la siguiente manera.\n\nnota_codigo:\nnota:\ncurso: se hace referencia al modelo de cursos, se ingresa el id_curso.\nestudiante: se hace referencia al modelo de Estudiantes, se ingresa el carnet."
+			},
+			"response": [
+				{
+					"name": "Nota_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nota_codigo\": \"102021\",\r\n    \"nota\": \"8\",\r\n     \"curso\": [\r\n     \"01\"\r\n ],\r\n    \"estudiante\": [\r\n     \"0905-21\"\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Nota/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Nota",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-l1rinrmC2wFsm2Iglt8KnKTi5vo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:39:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Nota\": {\n        \"nota_codigo\": \"102021\",\n        \"nota\": \"8\",\n        \"curso\": [\n            \"617b7771ce18403429416481\"\n        ],\n        \"estudiante\": [\n            \"617d6b6e50f212d20b379caa\"\n        ],\n        \"_id\": \"617dad8543f147bbfda8da46\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Nota_GEt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Nota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Nota"
+					]
+				},
+				"description": "Se muestran todos los datos guardados en el modelo tabla de mongo, mostrando como objeto json."
+			},
+			"response": [
+				{
+					"name": "Nota_GEt",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Nota",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Nota"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e3-4GasSvQrMor5OGxAsI6tYtxFg7k\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:41:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Nota\": [\n        {\n            \"_id\": \"617dad8543f147bbfda8da46\",\n            \"nota_codigo\": \"102021\",\n            \"nota\": \"8\",\n            \"curso\": [\n                {\n                    \"_id\": \"617b7771ce18403429416481\",\n                    \"id_Curso\": \"01\",\n                    \"Curso_nombre\": \"Desarrollo Web\"\n                }\n            ],\n            \"estudiante\": [\n                {\n                    \"_id\": \"617d6b6e50f212d20b379caa\",\n                    \"carnet\": \"0905-21\",\n                    \"estudiante_nombre\": \"Jorge\",\n                    \"estudiante_apellido\": \"Castillo Garcia\",\n                    \"cursos\": [\n                        \"617b7771ce18403429416481\"\n                    ],\n                    \"usuario\": [\n                        \"617d6474a75a156c45fd6620\"\n                    ],\n                    \"rol\": [\n                        \"617d5bdc1f36c36ddf893ff0\"\n                    ],\n                    \"disponibilidad\": [\n                        \"617d685c76bd3110f72bd059\"\n                    ],\n                    \"__v\": 0\n                }\n            ],\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Nota_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nota_codigo\": \"102021\",\r\n        \"nota\": \"20\",\r\n        \"curso\": [\r\n            \"617b7771ce18403429416481\"\r\n        ],\r\n        \"estudiante\": [\r\n            \"617d6b6e50f212d20b379caa\"\r\n        ],\r\n        \"_id\": \"617dad8543f147bbfda8da46\"\r\n     \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Nota/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Nota",
+						"modificar"
+					]
+				},
+				"description": "Para poder actualizar los datos de esta api, se toma todo el objeto de la nota a modificar incluyendo la _id generada por mongo."
+			},
+			"response": [
+				{
+					"name": "Nota_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nota_codigo\": \"102021\",\r\n        \"nota\": \"20\",\r\n        \"curso\": [\r\n            \"617b7771ce18403429416481\"\r\n        ],\r\n        \"estudiante\": [\r\n            \"617d6b6e50f212d20b379caa\"\r\n        ],\r\n        \"_id\": \"617dad8543f147bbfda8da46\"\r\n     \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Nota/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Nota",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "165"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a5-iNlBV63q5vPtNXbPX0lwXbHn3PM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:45:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Nota\": {\n        \"_id\": \"617dad8543f147bbfda8da46\",\n        \"nota_codigo\": \"102021\",\n        \"nota\": \"20\",\n        \"curso\": [\n            \"617b7771ce18403429416481\"\n        ],\n        \"estudiante\": [\n            \"617d6b6e50f212d20b379caa\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Nota_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Nota/eliminar/617dad8543f147bbfda8da4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Nota",
+						"eliminar",
+						"617dad8543f147bbfda8da4"
+					]
+				},
+				"description": "Para poder eliminar notas de esta api, se necesita agregar la api como tal y despues agregar la _id de la nota a eliminar.\n\neliminar/3444fdfr"
+			},
+			"response": [
+				{
+					"name": "Nota_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Nota/eliminar/617dad8543f147bbfda8da46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Nota",
+								"eliminar",
+								"617dad8543f147bbfda8da46"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-V71LOPmxUufpNTHf+fMxbrdr6tw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:46:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Bot\": {\n        \"_id\": \"617dad8543f147bbfda8da46\",\n        \"nota_codigo\": \"102021\",\n        \"nota\": \"20\",\n        \"curso\": [\n            \"617b7771ce18403429416481\"\n        ],\n        \"estudiante\": [\n            \"617d6b6e50f212d20b379caa\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "rol_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_Rol\": \"005\",\r\n    \"Rol\": \"ESTUDIANTE\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Rol/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Rol",
+						"registro"
+					]
+				},
+				"description": "Para podes ingresar datos a la api de roles se agregan de la siguiente manera.\nid_Rol:\nRol:"
+			},
+			"response": [
+				{
+					"name": "rol_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Rol\": \"003\",\r\n    \"Rol\": \"ESTUDIANTES\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Rol/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Rol",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "87"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"57-vph/wSqfyfNDc2jmDgwpUS6/H5A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:23:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Roles\": {\n        \"id_Rol\": \"003\",\n        \"Rol\": \"ESTUDIANTES\",\n        \"_id\": \"617da9c743f147bbfda8da2b\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "rol_Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Rol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Rol"
+					]
+				},
+				"description": "En la api rol del metodo put, es necesario agregar el rol a eliminar, agregando el _id que genera mongo por defecto a cada rol."
+			},
+			"response": [
+				{
+					"name": "rol_Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Rol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Rol"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"58-bMBWMLJuLHUU3qfydUu0OdkA5Kw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 19:45:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Roles\": [\n        {\n            \"_id\": \"617d5bdc1f36c36ddf893ff0\",\n            \"id_Rol\": \"002\",\n            \"Rol\": \"Estudiante\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "rol_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n            \"_id\": \"617d5bdc1f36c36ddf893ff0\",\r\n            \"id_Rol\": \"002\",\r\n            \"Rol\": \"ESTUDIANTE\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Rol/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Rol",
+						"modificar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "rol_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n            \"_id\": \"617d5bdc1f36c36ddf893ff0\",\r\n            \"id_Rol\": \"002\",\r\n            \"Rol\": \"ESTUDIANTE\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Rol/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Rol",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"56-fTRvxhJc98NklcO+KnVHqF+m2KA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:22:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Roles\": {\n        \"_id\": \"617d5bdc1f36c36ddf893ff0\",\n        \"id_Rol\": \"002\",\n        \"Rol\": \"ESTUDIANTE\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "rol_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Rol/eliminar/617da9c743f147bbfda8da2b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Rol",
+						"eliminar",
+						"617da9c743f147bbfda8da2b"
+					]
+				},
+				"description": "Para poder eliminar un rol, se necesita agregar la _id, al final de la api para eliminar el rol deseado.\n\neliminar/34737437dhduhd"
+			},
+			"response": [
+				{
+					"name": "rol_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Rol/eliminar/617da9c743f147bbfda8da2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Rol",
+								"eliminar",
+								"617da9c743f147bbfda8da2b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "87"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"57-f9SxTpvOK5nYnaqXobglsujVvp0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:24:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Roles\": {\n        \"_id\": \"617da9c743f147bbfda8da2b\",\n        \"id_Rol\": \"003\",\n        \"Rol\": \"ESTUDIANTES\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Disponibilidad_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Disponibilidad\": \"NO\"\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Disponibilidad",
+						"registro"
+					]
+				},
+				"description": "En esta api de disponibilidad se ingresa unicamente un dato.\nsi esta disponible o no.\n\nDisponibilidad: \"SI\""
+			},
+			"response": [
+				{
+					"name": "Disponibilidad_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Disponibilidad\": \"NO\"\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Disponibilidad",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"53-JBBUfIUdkupkFcGrkNR9HcgQxtQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:26:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Disponibilidad\": {\n        \"Disponibilidad\": \"NO\",\n        \"_id\": \"617daa6a43f147bbfda8da2e\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Disponibilidad_Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Disponibilidad"
+					]
+				},
+				"description": "Se muestran los dos datos guardados. SI o NO"
+			},
+			"response": [
+				{
+					"name": "Disponibilidad_Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Disponibilidad"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"55-0lP2mP9ti/y4wLQ2cjc7/fkYd3U\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 19:50:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Disponibilidad\": [\n        {\n            \"_id\": \"617d685c76bd3110f72bd059\",\n            \"Disponibilidad\": \"SI\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Disponibilidad_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Disponibilidad\": \"QUIEN SABE\",\r\n        \"_id\": \"617daa6a43f147bbfda8da2e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Disponibilidad",
+						"modificar"
+					]
+				},
+				"description": "Para poder modificar alguna de las dos disponibilidades se necesita agregar el objeto y la Id_ generada de la Disponibilidad."
+			},
+			"response": [
+				{
+					"name": "Disponibilidad_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"Disponibilidad\": \"QUIEN SABE\",\r\n        \"_id\": \"617daa6a43f147bbfda8da2e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Disponibilidad",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5b-guHhtagwXDreykEDDp93dKfRMlQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:27:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Disponibilidad\": {\n        \"_id\": \"617daa6a43f147bbfda8da2e\",\n        \"Disponibilidad\": \"QUIEN SABE\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Disponibilidad_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad/eliminar/617daa6a43f147bbfda8da2e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Disponibilidad",
+						"eliminar",
+						"617daa6a43f147bbfda8da2e"
+					]
+				},
+				"description": "Para poder eliminar alguna disponibilidad, solo se require agregar la _id, seguida de la api.\neliminar/33y43874dd"
+			},
+			"response": [
+				{
+					"name": "Disponibilidad_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Disponibilidad/eliminar/617daa6a43f147bbfda8da2e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Disponibilidad",
+								"eliminar",
+								"617daa6a43f147bbfda8da2e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5b-guHhtagwXDreykEDDp93dKfRMlQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:28:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Disponibilidad\": {\n        \"_id\": \"617daa6a43f147bbfda8da2e\",\n        \"Disponibilidad\": \"QUIEN SABE\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "bot_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bot_id\": \"0010\",\r\n    \"nota\": [\r\n        \"617d6b6e50f212d20b379caa\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Bot/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Bot",
+						"registro"
+					]
+				},
+				"description": "Para ingresar datos a la api bot.\n\nes necesario agregar los siguientes datos.\n\nbot_id:\nNota: se hace referencia a modelo tabla nota, se ingresa estudiante."
+			},
+			"response": [
+				{
+					"name": "bot_post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bot_id\": \"0010\",\r\n    \"nota\": [\r\n        \"617d6b6e50f212d20b379caa\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Bot/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Bot",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-x7cpevEb7KKsr3qWVDg/LmCqxLw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:29:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Bot\": {\n        \"bot_id\": \"0010\",\n        \"nota\": [\n            \"617db853c485d5db76ed2fb8\"\n        ],\n        \"_id\": \"617db91dc485d5db76ed2fbb\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "bot_get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Bot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Bot"
+					]
+				},
+				"description": "En esta api se obtienen todos los datos guardados en el bot."
+			},
+			"response": [
+				{
+					"name": "bot_get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Bot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Bot"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "845"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34d-/WcfwKn24LMp/VsES9CGkA1ZX7A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:29:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Bot\": [\n        {\n            \"nota\": [],\n            \"_id\": \"617d719f79c7049e9e29eae6\",\n            \"bot_id\": \"1234\",\n            \"estudiante\": [],\n            \"__v\": 0\n        },\n        {\n            \"nota\": [],\n            \"_id\": \"617d71e279c7049e9e29eae8\",\n            \"bot_id\": \"1234\",\n            \"estudiante\": [],\n            \"__v\": 0\n        },\n        {\n            \"nota\": [],\n            \"_id\": \"617d72650ec6b5bd17a40a8a\",\n            \"bot_id\": \"1234\",\n            \"estudiante\": [],\n            \"__v\": 0\n        },\n        {\n            \"nota\": [],\n            \"_id\": \"617d7b190ec6b5bd17a40a8d\",\n            \"bot_id\": \"1234\",\n            \"estudiante\": [\n                \"617d6b6e50f212d20b379caa\"\n            ],\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617d7d3fb81abf6b63cba1a8\",\n            \"bot_id\": \"1234\",\n            \"nota\": [],\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617d7e2220d372c4234b921c\",\n            \"bot_id\": \"1234\",\n            \"nota\": [],\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617d7f4dfdd109c743b4d5f3\",\n            \"bot_id\": \"1234\",\n            \"nota\": [],\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617d8068b261957fe9bdff20\",\n            \"bot_id\": \"1234\",\n            \"nota\": [],\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617db91dc485d5db76ed2fbb\",\n            \"bot_id\": \"0010\",\n            \"nota\": [\n                {\n                    \"_id\": \"617db853c485d5db76ed2fb8\",\n                    \"nota\": \"10\",\n                    \"curso\": [\n                        \"617b7771ce18403429416481\"\n                    ],\n                    \"estudiante\": [\n                        \"617d6b6e50f212d20b379caa\"\n                    ]\n                }\n            ],\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "bot_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"bot_id\": \"0010\",\r\n        \"nota\": [\r\n            \"617db853c485d5db76ed2fb8\"\r\n        ],\r\n        \"_id\": \"617db91dc485d5db76ed2fbb\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Bot/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Bot",
+						"modificar"
+					]
+				},
+				"description": "Para poder modificar un objeto del bot, es necesario llamar el objeto del bot, y la _id."
+			},
+			"response": [
+				{
+					"name": "bot_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"bot_id\": \"0010\",\r\n        \"nota\": [\r\n            \"617db853c485d5db76ed2fb8\"\r\n        ],\r\n        \"_id\": \"617db91dc485d5db76ed2fbb\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Bot/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Bot",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-C+pmi0wE8/e/GJMXrahfJ9ECdUw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:31:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Bot\": {\n        \"_id\": \"617db91dc485d5db76ed2fbb\",\n        \"bot_id\": \"0010\",\n        \"nota\": [\n            \"617db853c485d5db76ed2fb8\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "bot_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Bot/eliminar/617db91dc485d5db76ed2fbb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Bot",
+						"eliminar",
+						"617db91dc485d5db76ed2fbb"
+					]
+				},
+				"description": "Para eliminar datos del bot, se agrega _id seguida de la api.\neliminar/344jdj44"
+			},
+			"response": [
+				{
+					"name": "bot_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Bot/eliminar/617db91dc485d5db76ed2fbb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Bot",
+								"eliminar",
+								"617db91dc485d5db76ed2fbb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-C+pmi0wE8/e/GJMXrahfJ9ECdUw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 21:31:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Bot\": {\n        \"_id\": \"617db91dc485d5db76ed2fbb\",\n        \"bot_id\": \"0010\",\n        \"nota\": [\n            \"617db853c485d5db76ed2fb8\"\n        ],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Curso_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_Curso\": \"0905-2021\",\r\n    \"Curso_nombre\": \"Proyecto de Graduacion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Curso/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Curso",
+						"registro"
+					]
+				},
+				"description": "se ingresan los datos necesarios del curso.\nid_curso:\ncurso_nombre:"
+			},
+			"response": [
+				{
+					"name": "Curso_Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Curso\": \"0905-2021\",\r\n    \"Curso_nombre\": \"Proyecto de Graduacion\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Curso/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Curso",
+								"registro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"74-ziPgkRBzUxhfWT+zq8jYQv6z4bQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 19:59:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Cursos\": {\n        \"id_Curso\": \"0905-2021\",\n        \"Curso_nombre\": \"Proyecto de Graduacion\",\n        \"_id\": \"617da40743f147bbfda8da1c\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Curso_Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Curso"
+					]
+				},
+				"description": "Se Muestran todos los datos guardados de los cursos."
+			},
+			"response": [
+				{
+					"name": "Curso_Get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Curso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Curso"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "291"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"123-+c6LouGl08k1Vlkxh3OPsI3O+tI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:00:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Cursos\": [\n        {\n            \"_id\": \"617b7771ce18403429416481\",\n            \"id_Curso\": \"01\",\n            \"Curso_nombre\": \"Desarrollo Web\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617b7808554db69c12cfa9c8\",\n            \"id_Curso\": \"02\",\n            \"Curso_nombre\": \"Redes\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"617da40743f147bbfda8da1c\",\n            \"id_Curso\": \"0905-2021\",\n            \"Curso_nombre\": \"Proyecto de Graduacion\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Curso_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"id_Curso\": \"0905-2021\",\r\n        \"Curso_nombre\": \"Proyecto de Graduacion Ganado\",\r\n        \"_id\": \"617da40743f147bbfda8da1c\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Curso/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Curso",
+						"modificar"
+					]
+				},
+				"description": "Para poder modificar datos del curso es necesario agregar el objeto como tal y tambien la _id que genera mongo a cada curso."
+			},
+			"response": [
+				{
+					"name": "Curso_Put",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"id_Curso\": \"0905-2021\",\r\n        \"Curso_nombre\": \"Proyecto de Graduacion Ganado\",\r\n        \"_id\": \"617da40743f147bbfda8da1c\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Curso/modificar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Curso",
+								"modificar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "123"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7b-oeHVF/FGT4DHXMc1LilRaaLNbug\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:05:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Cursos\": {\n        \"_id\": \"617da40743f147bbfda8da1c\",\n        \"id_Curso\": \"0905-2021\",\n        \"Curso_nombre\": \"Proyecto de Graduacion Ganado\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Curso_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/proyectfinal/api/Curso/eliminar/617da40743f147bbfda8da1c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"proyectfinal",
+						"api",
+						"Curso",
+						"eliminar",
+						"617da40743f147bbfda8da1c"
+					]
+				},
+				"description": "Para eliminar un curso, se agrega la _id, que genera mongo db a cada curso.\n\neliminar/34445wsdff"
+			},
+			"response": [
+				{
+					"name": "Curso_Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/proyectfinal/api/Curso/eliminar/617da40743f147bbfda8da1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"proyectfinal",
+								"api",
+								"Curso",
+								"eliminar",
+								"617da40743f147bbfda8da1c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-a6lgNwmEsF6i6t4KNwNbYMiy0l8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Oct 2021 20:12:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Cursos\": null\n}"
+				}
+			]
+		}
+	]
+}
